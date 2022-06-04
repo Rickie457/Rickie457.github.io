@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+@media (max-width: 1025px){
+    div.section-textbody {
+        grid-template-columns: none;
+        grid-auto-rows: auto;
+        row-gap: 0;
+    }
+
+    div.home-textbody {
+        font-size: 12px;
+    }
+
+    div.section-title {
+        font-size: 24px;
+    }
+    
+    div.items {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px){
+    div.home-textbody{
+        font-size: 9px;
+    }
+
+    div.items {
+        font-size: 10px;
+    }
+
+    div.section-title {
+        font-size: 20px;
+    }
+    
+    div.btn {
+        font-size: 8px;
+        width: 100px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 320px){
+    div.home-textbody{
+        font-size: 6.5px;
+    }
+
+    div.items {
+        font-size: 8px;
+    }
+
+    div.section-title {
+        font-size: 16px;
+    }
+    
+    div.btn-container {
+        font-size: 10px;
+    }
+}
+
+:root {
+    --dark-bg-color: #181a1b;
+    --dark-bg-text: #e8e6e3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+body {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-bg-text);
+}
+
+/* 
+==============
+Light-Dark Btn 
+==============
+*/
+.btn-container {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.btn {
+    font-size: 1em;
+    border: solid 2px var(--dark-bg-text);
+    padding: 1em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+
+    border-radius: 4px;
+    color: var(--dark-bg-text);
+    background-color: var(--dark-bg-color);
+    box-shadow: inset 0 0 0 0 var(--dark-bg-text);
+    transition: ease-in-out 0.3s;
+    outline: none;
+}
+
+.btn:hover {
+    box-shadow: inset 125px 0 0 0 var(--dark-bg-text);
+    color: var(--dark-bg-color);
+}
+
+/* =========
+Home Page
+=========*/
+.home {
+    padding-bottom: 8em;
+    text-align: center;
+    height: 60vh;
+}
+
+.typewriter-anim {
+    animation: typewriter 1s steps(12) 1s 1 normal both,
+    blinkTextCursor 500ms infinite normal;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes typewriter {
+    0% {
+        width: 0ch;
+    }
+    100% {
+        width: 5ch;
+    }
+}
+
+@keyframes blinkTextCursor{
+    0%, 100% {
+        border-right-color: var(--dark-bg-text);
+    }
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+.home-textbody {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.hello {
+    font-size: 12em;
+    border-right: 2px solid var(--dark-bg-text);
+    margin: 0 auto;
+}
+
+.about {
+    font-size: 1.5em;
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.get-in-touch {
+    padding: .75em;
+    font-size: 1.2em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.get-in-touch a {
+    text-decoration: underline #242F9B 2px;
+    color: var(--dark-bg-text);
+
+}
+
+/* Body */
+/* Typography */
+.body-container section {
+    padding: 32px;
+    font-size: 16px;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    /* text-align: center; */
+}
+
+.items, img {
+    margin-top: 12px;
+}
+
+.items {
+    margin-bottom: 2px;
+    padding: 0;
+}
+
+.item-body ul {
+    margin-left: 25px;
+}
+
+.item-body ul li {
+    padding: 2px;
+}
+
+.item-title {
+    font-size: 1.5em;
+}
+
+.item-subtitle {
+    font-size: 1.25em;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--dark-bg-text);
+}
+
+.contacts img {
+    max-width: 40px;
+}
+
+/* Positioning */
+.section-textbody {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    row-gap: 3em;
+    column-gap: 2em;
+}
+
+.section-textbody, .section-title, hr, .contacts {
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    margin-top: 4px;
+    border: 1px solid var(--dark-bg-text);
+}
+
+.contacts ul li {
+    list-style: none;
+    padding-right: 12px;
+    padding-top: 12px;
+
+    float: left;
+    display: inline;
+}
+
+.contacts img {
+    border: none;
+}
