@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 @media (max-width: 1025px){
-    div.section-textbody {
+    div.section-block {
         grid-template-columns: none;
         grid-auto-rows: auto;
         row-gap: 0;
@@ -20,13 +20,22 @@
     }
 }
 
+@media (max-width: 768px){
+    p.about {
+        width: 60vw;
+    }
+    div.section-block, div.section-title, div.contacts-list {
+        width: 70vw;
+    }
+}
+
 @media (max-width: 480px){
     div.home-textbody{
         font-size: 6.5px;
     }
 
     p.about {
-        width: 50vw;
+        width: 55vw;
     }
 
     div.items {
@@ -42,12 +51,16 @@
         font-size: 10px;
     }
 
-    div.section-textbody, div.section-title, div.contacts {
-        width: 60vw;
+    div.section-block, div.section-title, div.contacts-list {
+        width: 65vw;
     }
 
     div.items {
         margin-top: 8px;
+    }
+
+    ul.item-tags li {
+        margin: 5px 5px 0 0;
     }
 }
 
@@ -73,7 +86,7 @@
         font-size: 10px;
     }
 
-    div.section-textbody, div.section-title, div.contacts {
+    div.section-block, div.section-title {
         width: 70vw;
     }
 
@@ -219,21 +232,14 @@ Home Page
     border-bottom: 2px solid var(--dark-bg-text)
 }
 
-.items, img {
-    margin-top: 12px;
-}
-
 .items {
+    margin-top: 12px;
     margin-bottom: 2px;
     padding: 0;
 }
 
-.item-body ul {
-    margin-left: 25px;
-}
-
-.item-body ul li {
-    padding: 2px;
+.item-title, .item-subtitle, .item-body {
+    margin-right: 1.5em;
 }
 
 .item-title {
@@ -244,37 +250,38 @@ Home Page
     font-size: 1.25em;
 }
 
+.item-body {
+    margin-left: 1.5em;
+}
+
+.item-body li {
+    padding: 2px;
+}
+
 /* Images */
 img {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 12px;
     border: 1px solid var(--dark-bg-text);
 }
 
 .contacts img {
-    max-width: 40px;
+    max-width: 30px;
 }
 
 /* Positioning */
-.section-textbody {
+.section-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 1fr;
-    row-gap: 3em;
-    column-gap: 2em;
+    padding-bottom: 1em;
 }
 
-.section-textbody, .section-title, hr, .contacts {
+.section-block, .section-title, .contacts-list {
     width: 50vw;
     margin-left: auto;
     margin-right: auto;
-}
-
-hr {
-    margin-top: 4px;
-    border: 1px solid var(--dark-bg-text);
-    /* align-items: center; */
 }
 
 .contacts ul li {
@@ -288,4 +295,29 @@ hr {
 
 .contacts img {
     border: none;
+}
+
+/* Tags */
+.item-tags {
+    list-style-type: none;
+}
+
+.item-tags li {
+    display: inline-block;
+    font-size: .8em;
+    margin: 10px 10px 0 0;
+    padding: 5px;
+    border-radius: 12px;
+}
+
+#PYGAME .item-tags li {
+    background-color: #1C658C
+}
+
+#DISCORD .item-tags li {
+    background-color: #357C3C;
+}
+
+#GITPAGES .item-tags li {
+    background-color: #B33030;
 }
